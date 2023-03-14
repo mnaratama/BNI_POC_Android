@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fund_transfer_graph"
+    app:startDestination="@id/currencyCalculatorFragment">
+
+    <fragment
+        android:id="@+id/currencyCalculatorFragment"
+        android:name="com.ibm.bniapp.presentation.ui.CurrencyCalculatorFragment"
+        tools:layout="@layout/fragment_currency_calculator"
+        android:label="Currency Calculator Fragment" >
+        <action
+            android:id="@+id/action_currencyCalculatorFragment_to_chooseBeneficaryFragment_new"
+            app:destination="@id/chooseBeneficiaryFragmentnew" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseBeneficiaryFragmentnew"
+        android:name="com.ibm.bniapp.presentation.ui.ChooseBeneficaryFragment"
+        tools:layout="@layout/bottom_fragment_choose_beneficiary"
+        android:label="Choose Beneficary Fragment" >
+        <action
+            android:id="@+id/action_chooseBeneficiaryFragment_to_fundTransferSendingToFragment"
+            app:destination="@id/fundTransferSendingToFragment" >
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fundTransferSendingToFragment"
+        android:name="com.ibm.bniapp.presentation.ui.FundTransferSendingToFragment"
+        tools:layout="@layout/fragment_fund_transfer_sending_to"
+        android:label="Fund Transfer Sending To Fragment" >
+        <action
+            android:id="@+id/action_fundTransferSendingToFragment_to_confirmTransactionFragment"
+            app:destination="@id/confirmTransactionFragment" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmTransactionFragment"
+        android:name="com.ibm.bniapp.presentation.ui.ConfirmTransactionFragment"
+        tools:layout="@layout/fragment_confirm_transaction"
+        android:label="Confirm Transaction Fragment" >
+        <action
+            android:id="@+id/action_confirmTransactionFragment_to_fragmentBeneficiaryMPIN"
+            app:destination="@id/fragmentBeneficiaryMPIN" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentBeneficiaryMPIN"
+        android:name="com.ibm.bniapp.presentation.ui.FragmentBeneficiaryMPIN"
+        tools:layout="@layout/fragment_beneficiary_mpin"
+        android:label="Beneficiary MPIN Fragment" >
+        <action
+            android:id="@+id/action_fragmentBeneficiaryMPIN_to_fragmentBeneficiarySuccessDetails"
+            app:destination="@id/fragmentBeneficiarySuccessDetails" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentBeneficiarySuccess"
+        android:name="com.ibm.bni.auth.presentation.ui.FragmentBeneficiarySuccess"
+        tools:layout="@layout/fragment_beneficiary_success"
+        android:label="Beneficiary Success Fragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentBeneficiarySuccessDetails"
+        android:name="com.ibm.bniapp.presentation.ui.FragmentBeneficiarySuccessDetails"
+        tools:layout="@layout/fragment_beneficiary_success_details"
+        android:label="Beneficiary Success Fragment" >
+
+        <action
+            android:id="@+id/action_fragmentBeneficiarySuccessDetails_to_recurringFragment"
+            app:destination="@id/recurringFragment" >
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/recurringFragment"
+        android:name="com.ibm.bniapp.presentation.ui.RecurringFragment"
+        tools:layout="@layout/fragment_recurring"
+        android:label="Recurring Fragment" >
+        <action
+            android:id="@+id/action_recurringFragment_to_fragmentTransferSuccess"
+            app:destination="@id/fragmentTransferSuccess" >
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentTransferSuccess"
+        android:name="com.ibm.bniapp.presentation.ui.FragmentTransferSuccess"
+        tools:layout="@layout/fragment_transfer_success"
+        android:label="Transfer Success Fragment" >
+
+    </fragment>
+
+
+</navigation>

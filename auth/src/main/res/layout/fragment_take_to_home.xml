@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/peek_bg_sky">
+
+    <ImageView
+        android:id="@+id/ivBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:translationZ="4dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/idIVLogo"
+        android:background="@drawable/clip_path"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/peekImg"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:src="@drawable/poin_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/congratlabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="31dp"
+        android:gravity="center"
+        android:text="@string/congratulations"
+        android:textColor="@color/textColorOnButtonSetting"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peekImg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/earnlabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="90dp"
+        android:gravity="center"
+        android:text="@string/you_ve_earned"
+        android:textColor="@color/textColorOnButtonSetting"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/congratlabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pointslabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:text="2,000"
+        android:textColor="@color/points_color"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/earnlabel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subpointslabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:text="@string/points"
+        android:textColor="@color/points_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointslabel" />
+
+    <RelativeLayout
+        android:id="@+id/peekContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        android:background="@drawable/label_bg"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/peekQnLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:text="Would you like to peek balance in Pre Login?"
+            android:textColor="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/peekQnBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/peekQnLabel"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_bg"
+            android:gravity="center"
+            android:text="Yes, I would like to"
+            android:textAllCaps="false"
+            android:textColor="@color/intro_logo_color" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/intro_logo_color"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="start|center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/take_me_to_my_homepage"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

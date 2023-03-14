@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <uses-permission android:name="android.permission.INTERNET"> </uses-permission>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:name=".BniApplication"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/bni_ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/bni_ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BniApp"
+        tools:targetApi="31">
+        <activity
+            android:theme="@style/FullScreen"
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/FullScreen"
+            android:name="com.ibm.bni.auth.presentation.ui.AuthActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:theme="@style/FullScreen"
+            android:name="com.ibm.bni.auth.presentation.ui.PreLoginActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:theme="@style/FullScreen"
+            android:name="com.ibm.bni.auth.presentation.ui.HomeActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name="com.ibm.bni.home.presentation.NavbarActivity"
+            android:exported="true"
+            android:theme="@style/FullScreen">
+        </activity>
+        <activity
+            android:theme="@style/FullScreen"
+            android:name="com.ibm.bniapp.presentation.ui.FundTransferActivity"
+            android:exported="true">
+        </activity>
+    </application>
+
+</manifest>

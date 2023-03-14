@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BniApp</string>
+    <string name="internation_fund_transfer">International Funds Transfer</string>
+    <string name="currency_calculator">CURRENCY CALCULATOR</string>
+    <string name="overseas_recipient">Overseas Recipients</string>
+    <string name="your_send">Your send</string>
+    <string name="recipient_gets">Recipients gets</string>
+    <string name="exchange_rate">Exchange Rate</string>
+    <string name="make_international_transfer">Make International Transfer</string>
+    <string name="sending_to">SENDING TO</string>
+    <string name="charge_type">CHARGE TYPE</string>
+    <string name="transfer_message">You van transfer equivalent to $25,000 per day</string>
+    <string name="beneficiary">Beneficiary</string>
+    <string name="guaranteed">Guaranteed</string>
+    <string name="beneficiary_description">Transfer fees will be deducted from the amount the recipient receives</string>
+    <string name="guaranteed_description">Sender pays transfer fees so the recipient receives full amount</string>
+    <string name="transfer_purpose">Transfer Purpose</string>
+</resources>

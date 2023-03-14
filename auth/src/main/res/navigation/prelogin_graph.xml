@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prelogin_graph"
+    app:startDestination="@id/preLoginFragment">
+
+
+    <fragment
+        android:id="@+id/preLoginFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.HomeFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="PreLoginFragment" >
+        <action
+            android:id="@+id/action_preLoginFragment_to_peekBalanceFragment"
+            app:destination="@id/peekBalanceFragment" />
+        <action
+            android:id="@+id/action_preLoginFragment_to_preLoginConfigurationFragment"
+            app:destination="@id/preLoginConfigurationFragment" />
+        <action
+            android:id="@+id/action_preLoginFragment_to_faceIdLoginFragment"
+            app:destination="@id/faceIdLoginFragment" />
+        <action
+            android:id="@+id/action_preLoginFragment_to_fingerPrintLoginFragment"
+            app:destination="@id/fingerPrintLoginFragment" />
+        <action
+            android:id="@+id/action_preLoginFragment_to_loginUserIdPasswordFragment"
+            app:destination="@id/loginUserIdPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peekBalanceFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.PeekBalanceFragment"
+        tools:layout="@layout/fragment_peekbalance"
+        android:label="PeekBalanceFragment" />
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/preLoginConfigurationFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.PreLoginConfigurationFragment"
+        tools:layout="@layout/fragment_prelogin_configuration"
+        android:label="PreLoginConfigurationFragment" />
+    <fragment
+        android:id="@+id/faceIdLoginFragment"
+        tools:layout="@layout/fragment_biomatric_face_id"
+        android:name="com.ibm.bni.auth.presentation.ui.FaceIdLoginFragment"
+        android:label="FaceIdLoginFragment" >
+        <action
+            android:id="@+id/action_faceIdLoginFragment_to_loginUserIdPasswordFragment"
+            app:destination="@id/loginUserIdPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fingerPrintLoginFragment"
+        tools:layout="@layout/fragment_biometric_finger"
+        android:name="com.ibm.bni.auth.presentation.ui.FingerPrintLoginFragment"
+        android:label="FingerPrintLoginFragment" >
+        <action
+            android:id="@+id/action_fingerPrintLoginFragment_to_loginUserIdPasswordFragment"
+            app:destination="@id/loginUserIdPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginUserIdPasswordFragment"
+        tools:layout="@layout/fragment_user_id_password_login"
+        android:name="com.ibm.bni.auth.presentation.ui.LoginUserIdPasswordFragment"
+        android:label="LoginUserIdPasswordFragment" />
+</navigation>

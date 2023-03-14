@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp"
+    android:paddingBottom="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="11dp"
+                android:elevation="1dp"
+                style="@style/lblTagSetting"
+                android:background="@drawable/label_new_hot_deal_shape"
+                android:drawableRight="@drawable/logo_bni_point"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="Earn 1000"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgNews"
+                android:layout_width="0dp"
+                android:layout_height="152dp"
+                android:scaleType="fitXY"
+                android:src="#EFA63A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/messageNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        style="@style/CardNewHotDealTextTitle"
+        tools:text="Get IDR 100,000 OFF when you purchase ticket for BNI UI Half Marathon 2023"
+        app:layout_constraintLeft_toLeftOf="@id/bannerImage"
+        app:layout_constraintRight_toRightOf="@id/bannerImage"
+        app:layout_constraintTop_toBottomOf="@id/bannerImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

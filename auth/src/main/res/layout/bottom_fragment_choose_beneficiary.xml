@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/chooseBeneLayout"
+        android:background="@drawable/choose_bg">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_beneficiary"
+        android:textSize="16sp"
+        android:id="@+id/chooseBenefLabel"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/black"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="16sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/downIcon"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/receivers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chooseBeneLayout"
+        android:layout_marginStart="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginEnd="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_beneficiary"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/intro_logo_color"
+        android:clipToOutline="true"
+        android:gravity="start|center_vertical"
+        android:paddingStart="10dp"
+        android:text="@string/add_beneficiary"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:paddingRight="10dp"
+        android:drawableRight="@drawable/ic_plus"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

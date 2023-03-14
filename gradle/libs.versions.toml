@@ -1,0 +1,149 @@
+[versions]
+#sdkVeriosns
+minSdkVersion = "24"
+compileSdkVersion = "33"
+targetSdkVersion = "33"
+
+# plugins
+androidGradle                       = "7.4.2"
+junit                               = "1.8.2.1"
+sonarQube                           = "3.5.0.2730"
+
+
+firebaseCrashlytics                 = "2.9.2"
+firebaseBom                         = "31.2.3"
+googleService                       = "4.3.14"
+hilt                                = "2.43.2"
+kotlin                              = "1.7.21"
+kotlinCoroutines                    = "1.6.4"
+kotlinSerialization                 = "1.4.1"
+kotlinSerializationConverter        = "0.8.0"
+lifecycle                           = "2.5.1"
+compose-bom                         = "2022.12.00"
+material3                           = "1.0.1"
+composeNavigation                   = "2.5.3"
+composeNavigationHilt               = "1.0.0"
+constraintlayoutCompose            = "1.0.1"
+retrofit                            = "2.9.0"
+timber                              = "5.0.1"
+gson                                = "2.10"
+composeAccompanist                  = "0.25.1"
+composeCompiler                     = "1.4.0-alpha02"
+desugar                             = "1.1.8"
+preview                             = "1.0.5"
+androidxCore                        = "1.7.0"
+appcompat                           = "1.5.1"
+material1                           = "1.6.1"
+constraintlayout                    = "2.1.4"
+androidxLifecycle                   = "2.5.1"
+eventbus                            = "3.3.1"
+jetpackNavigation                   = "2.5.3"
+constraintLayout                    = "2.1.4"
+autoImageSlider                     = "1.4.0"
+navGraph                            = "2.5.3"
+navUI                               = "2.5.3"
+biometricKts                        = "1.2.0-alpha05"
+skomlachBiometric                   = "2.1.56"
+jetpackRoom                          = "2.5.0"
+
+
+# test libraries
+testJunit                           = "5.9.0"
+testMockk                           = "1.13.3"
+espressoCore                        = "3.4.0"
+extJunit                            = "1.1.3"
+junitCore                           = "4.13.2"
+
+# android test libraries
+testAndroidJunitExt                 = "1.1.4" # to prevent manifest crashes in UI tests for Android 12 (1.1.3 or higher needed)
+testAndroidRunner                   = "1.4.0"
+testAndroidEspressoCore             = "3.5.0"
+
+
+[libraries]
+compose-bom                         = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+composeMaterial3                    = { group = "androidx.compose.material3", name = "material3" , version.ref="material3" }
+composeNavigation                   = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
+composeNavigationHilt               = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "composeNavigationHilt" }
+compose-ui-tooling-preview          = { module = "androidx.compose.ui:ui-tooling-preview", version = "1.3.3" }
+desugar                             = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar" }
+hilt                                = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hiltCompiler                        = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+kotlinCoroutines                    = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinCoroutines" }
+kotlinSerialization                 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+kotlinSerializationConverter        = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "kotlinSerializationConverter" }
+lifecycleViewModel                  = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+retrofit                            = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+gsonConverter                       = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+timber                              = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+composePreview                      = { module = "androidx.compose.ui:ui-tooling", version.ref = "preview" }
+gson                                = { module = "com.google.code.gson:gson", version.ref = "gson" }
+material-icons-extended             = { module = "androidx.compose.material:material-icons-extended", version.ref = "composeCompiler" }
+constraintlayout-compose            = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
+accompanist-navigation-animation    = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "composeAccompanist" }
+componentNavigationFragmentKtx      = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "jetpackNavigation" }
+componentNavigationUiKtx            = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "jetpackNavigation" }
+componentNavigationDynamicFeaturesFragmen    = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "jetpackNavigation" }
+constraint-layout                   = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayout" }
+autoImageSlider                     = { module = "com.github.smarteist:autoimageslider", version.ref = "autoImageSlider" }
+navGraph                            = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "autoImageSlider"}
+navUI                               = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "autoImageSlider"}
+biometricKtx                        = { module = "androidx.biometric:biometric-ktx", version.ref = "biometricKts"}
+skomlachBiometric                   = { module = "dev.skomlach:biometric", version.ref = "skomlachBiometric"}
+roomRuntime                         = { module = "androidx.room:room-runtime", version.ref = "jetpackRoom"}
+roomKtx                             = { module = "androidx.room:room-ktx", version.ref = "jetpackRoom"}
+roomPaging                          = { module = "androidx.room:room-paging", version.ref = "jetpackRoom"}
+roomCompiler                        = { module = "androidx.room:room-compiler", version.ref = "jetpackRoom"}
+
+
+androidxCore                        = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+appcompat                           = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material1                           = { module = "com.google.android.material:material", version.ref = "material1" }
+constraintlayout                    = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+lifecycleLivedata                   = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidxLifecycle" }
+lifecycleViewmode                   = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
+eventbus                            = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
+firebase                            = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom"}
+
+
+# test libraries
+testJunit                           = { module = "org.junit.jupiter:junit-jupiter", version.ref = "testJunit" }
+testKotlin                          = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+testKotlinCoroutines                = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }
+testMockk                           = { module = "io.mockk:mockk", version.ref = "testMockk" }
+androidTestMockk                    = { module = "io.mockk:mockk-android", version.ref = "testMockk" }
+espressoCoreTest                    = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+extJunitTest                        = { module = "androidx.test.ext:junit", version.ref = "extJunit" }
+junitCoreTest                       = { module = "junit:junit", version.ref = "junitCore" }
+roomTesting                         = { module = "androidx.room:room-testing", version.ref = "jetpackRoom" }
+
+# accompanist
+composeAccompanistSwipeRefresh      = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "composeAccompanist" }
+
+
+
+[plugins]
+androidApplication                  = { id = "com.android.application", version.ref = "androidGradle" }
+androidLibrary                      = { id = "com.android.library", version.ref = "androidGradle" }
+hilt                                = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+junit                               = { id = "de.mannodermaus.android-junit5", version.ref = "junit" }
+kotlin                              = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinKapt                          = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlinParcelize                     = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlinSerialization                 = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+sonarQube                           = { id = "org.sonarqube", version.ref = "sonarQube" }
+firebaseCrashlytics                 = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics"}
+googleService                       = { id = "com.google.gms.google-services", version.ref = "googleService"}
+
+
+[bundles]
+common = [
+    "composeMaterial3",
+    "composeNavigation",
+    "accompanist-navigation-animation",
+    "compose-bom",
+    "hilt",
+    "kotlinCoroutines",
+    "timber",
+    "eventbus"
+]

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "537921750994",
+    "project_id": "maverick-8f477",
+    "storage_bucket": "maverick-8f477.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537921750994:android:7ce23976bd91ab3359aa0b",
+        "android_client_info": {
+          "package_name": "com.ibm.bni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537921750994-ek93t35ja5imbqnep9b3n7hb3pe7821n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibm.bni",
+            "certificate_hash": "8e5b90156cf57debc63e777a51cf1dce1e971ca3"
+          }
+        },
+        {
+          "client_id": "537921750994-o6kv7oqshoi22a50l3p3t4bc70k7j6h6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDeqqHAJuDnK6C_yuLRbsBsKV7yWIPraQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537921750994-o6kv7oqshoi22a50l3p3t4bc70k7j6h6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nav_background">
+
+    <ImageView
+        android:id="@+id/ivBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_back_dark_brown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:src="@drawable/logo_bni_point"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtLogoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="1,000"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toLeftOf="@id/ivLogo"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFundTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/internation_fund_transfer"
+        android:textSize="18sp"
+        android:textColor="@color/custom_dark_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackButton" />
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFundTransfer" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCurrencyCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/currency_calculator"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtOverseasRecipients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/overseas_recipient"
+        android:textColor="@color/intro_logo_color"
+        android:textSize="12sp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background" />
+
+    <View
+        android:id="@+id/background_1"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/currency_background"
+        app:layout_constraintTop_toBottomOf="@id/txtOverseasRecipients" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtYourSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/your_send"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background_1" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spnYourSend"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="@string/your_send"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtYourSend" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtYourSendValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/spnYourSend"
+        app:layout_constraintTop_toBottomOf="@id/txtYourSend" />
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/currency_background_2"
+        app:layout_constraintTop_toBottomOf="@id/spnYourSend" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtRecipientGets"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recipient_gets"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/divider_1" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spnRecipientGets"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="@string/your_send"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtRecipientGets" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtRecipientGetsValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/spnRecipientGets"
+        app:layout_constraintTop_toBottomOf="@id/txtRecipientGets" />
+
+    <View
+        android:id="@+id/background_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/currency_background_2"
+        app:layout_constraintBottom_toBottomOf="@+id/background_1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtExchangeRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/exchange_rate"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background_2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtExchangeRateValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="EUR 1 = IDR 16436.72"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtExchangeRate" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMakeInternationalTransfer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/intro_logo_color"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:text="@string/make_international_transfer"
+        android:gravity="center_vertical|left"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

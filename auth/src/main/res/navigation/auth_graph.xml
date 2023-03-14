@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_graph"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.IntroFragment"
+        tools:layout="@layout/fragment_intro"
+        android:label="Intro Fragment" >
+        <action
+            android:id="@+id/action_mobileFragment_to_mobileInputFragment"
+            app:destination="@id/customerRegistrationEnterMobileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseEnv"
+        android:name="com.ibm.bni.auth.presentation.ui.ChooseBeneficaryFragment"
+        tools:layout="@layout/bottom_fragment_choose_beneficiary"
+        android:label="Intro Fragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/benificarySuccess"
+        android:name="com.ibm.bni.auth.presentation.ui.FragmentBeneficiarySuccess"
+        tools:layout="@layout/fragment_beneficiary_success"
+        android:label="Intro Fragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/benificarympin"
+        android:name="com.ibm.bni.auth.presentation.ui.FragmentBeneficiaryMPIN"
+        tools:layout="@layout/fragment_beneficiary_mpin"
+        android:label="Intro Fragment" >
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/customerRegistrationEnterMobileFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.CustomerRegistrationEnterMobileFragment"
+        android:label="CustomerRegistrationEnterMobileFragment">
+        <action
+            android:id="@+id/action_customerRegistrationEnterMobileFragment_to_customerRegistrationEnterOtpFragment"
+            app:destination="@+id/customerRegistrationEnterOtpFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerRegistrationEnterOtpFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.CustomerRegistrationEnterOtpFragment"
+        android:label="CustomerRegistrationEnterOtpFragment">
+        <action
+            android:id="@+id/action_customerRegistrationEnterOtpFragment_to_customerRegistrationEnterCredentialFragment"
+            app:destination="@+id/customerRegistrationEnterCredentialFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerRegistrationEnterCredentialFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.CustomerRegistrationEnterCredentialFragment"
+        android:label="CustomerRegistrationEnterCredentialFragment">
+        <action
+            android:id="@+id/action_customerRegistrationEnterCredentialFragment_to_peekConfigureFragment"
+            app:destination="@+id/peekConfigureFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/peekConfigureFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.ConfigurePeekBalanceFragment"
+        tools:layout="@layout/fragment_configure_peek_balance"
+        android:label="Peek Configure Fragment">
+        <action
+            android:id="@+id/action_peekConfigureFragment_to_takeToHomeFragment"
+            app:destination="@+id/takeToHomeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/takeToHomeFragment"
+        android:name="com.ibm.bni.auth.presentation.ui.TakeToHomeFragment"
+        tools:layout="@layout/fragment_take_to_home"
+        android:label="Take to Home Fragment">
+    </fragment>
+
+</navigation>

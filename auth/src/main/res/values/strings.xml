@@ -1,0 +1,36 @@
+<resources>
+    <string name="cr_enter_mobile_number">Enter Mobile Number</string>
+    <string name="cr_mobile_number">Mobile Number</string>
+    <string name="cr_number_match">We will verify your number matches our records and one-time-passcode will be sent to you. please make sure it is the number you previously registered with BNI Mobile banking.</string>
+
+    <string name="cr_enter_otp">Enter OTP</string>
+    <string name="cr_enter_otp_sent_to">Enter the OTP sent to [</string>
+    <string name="closing_bracket">]</string>
+    <string name="cr_resend_otp">Resend OTP</string>
+
+    <string name="cr_enter_credential">Enter Credential</string>
+    <string name="cr_user_id">User ID</string>
+    <string name="cr_enter_user_id">Enter user id</string>
+    <string name="cr_password">Password</string>
+    <string name="cr_enter_password">Enter password</string>
+
+    <string name="congrats_bni">Congratulations, you\'re all set to enjoy your BNI Mobile Banking app!</string>
+    <string name="done">Done</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="you_ve_earned">You\'ve earned</string>
+    <string name="points">points</string>
+    <string name="take_me_to_my_homepage">Take me to my homepage</string>
+    <string name="btn_next">Next</string>
+    <string name="loginlabel">Log in to enjoy the app to its fullest</string>
+    <string name="let_s_get_started">Let\'s get started</string>
+    <string name="thousand">1000</string>
+    <string name="new_recipient_added">New Recipient Added</string>
+    <string name="recipiant_name">You have successfully added <b>Puji Wati</b> as a recipient for International Funds Transfer</string>
+    <string name="make_transfer">Make Transfer</string>
+    <string name="international_funds_transfer">International Funds Transfer</string>
+    <string name="submit">Submit</string>
+    <string name="enter_mpin">ENTER MPIN</string>
+    <string name="choose_beneficiary">Choose Beneficiary</string>
+    <string name="add_beneficiary">Add Beneficiary</string>
+    <string name="view">View</string>
+</resources>

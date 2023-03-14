@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rootPeekBalance"
+    android:fillViewport="true"
+    android:background="@drawable/background_layer_1"
+    android:paddingHorizontal="40dp"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/contPeekBalance"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl1"
+            style="@style/RegularText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Account Type"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblBalance"
+            style="@style/RegularText.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="IDR 104,287,000"
+            app:layout_constraintLeft_toLeftOf="@id/lbl1"
+            app:layout_constraintTop_toBottomOf="@id/lbl1" />
+
+        <ImageView
+            android:id="@+id/imgCardCont"
+            android:layout_width="137dp"
+            android:layout_height="86.3dp"
+            android:layout_marginTop="58dp"
+            android:elevation="2dp"
+            android:src="@color/black"
+            android:scaleType="fitXY"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize25Percent" />
+
+        <TextView
+            android:id="@+id/lblRecentTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="RECENT TRANSACTION"
+            app:layout_constraintLeft_toLeftOf="@id/lblBalance"
+            app:layout_constraintTop_toBottomOf="@id/lblBalance" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblRecentTransaction"
+            tools:itemCount="5"
+            tools:listitem="@layout/layout_recent_transaction_item" />
+
+        <ProgressBar
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="600dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
